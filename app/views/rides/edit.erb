@@ -1,0 +1,21 @@
+<h1>New Ride</h1>
+    <form method="PATCH" action="/rides/:id">
+        <label>Name</label>
+          <input type="text" name="ride[name]" value="<%= @ride.name %>"> <br/>
+        <label>Drop ride?</label>
+        <input type="text" name="drop" value="<%= @ride.name %>"><br/>
+         <label>Pace</label>
+          <input type="text" name="ride[pace]" value="<%= @ride.pace %>"> <br/>
+           <label>Start Time</label>
+          <input type="datetime-local" name="ride[start_time]" value="<%= @ride.start_time %>"> <br/>
+           <label>Location</label>
+          <input type="text" name="ride[location]" value="<%= @ride.location %>"> <br/>
+           <label>Distance</label>
+          <input type="number" name="ride[distance]" value="<%= @ride.distance %>"> <br/>
+           <label>Description</label>
+          <textarea name="ride[description]"><%= @ride.description %>"</textarea> <br/>
+           <label>Surface</label>
+          <input type="text" name="ride[surface]" value="<%= @ride.surface %>"> <br/>
+         
+         <input type="submit" value="Update Ride">
+    </form>

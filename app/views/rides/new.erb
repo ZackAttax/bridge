@@ -1,0 +1,21 @@
+<h1>New Ride</h1>
+    <form method="POST" action="/rides/new">
+        <label>Name</label>
+          <input type="text" name="ride[name]"> <br/>
+        <label>Drop ride?</label>
+        <input type="text" name="drop"><br/>
+         <label>Pace</label>
+          <input type="text" name="ride[pace]"> <br/>
+           <label>Start Time</label>
+          <input type="datetime-local" name="ride[start_time]"> <br/>
+           <label>Location</label>
+          <input type="text" name="ride[location]"> <br/>
+           <label>Distance</label>
+          <input type="number" name="ride[distance]"> <br/>
+           <label>Description</label>
+          <textarea name="ride[description]"> </textarea><br/>
+           <label>Surface/label>
+          <input type="text" name="ride[surface]"> <br/>
+          <input type="hidden" value="<%#{@user.id}%>"name="ride[user_id]"> <br/>
+         <input type="submit" value="Create Ride">
+    </form>

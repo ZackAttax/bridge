@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_133120) do
 
   create_table "rides", force: :cascade do |t|
     t.string "name"
-    t.boolean "drop"
+    t.string "drop"
     t.string "pace"
     t.datetime "start_time"
     t.string "location"

@@ -1,3 +1,8 @@
+
+<form action="/rides" method="get">
+    <input type="submit" value="All Rides">
+</form>
+
 <%=@ride.name %>
 <li><%=@ride.pace %></li>
 <li><%=@ride.drop %></li>
@@ -7,16 +12,15 @@
 <li><%=@ride.surface %></li>
 <li><%=@ride.description %></li>
 
+<%if current_user.id == @ride.user_id%>
 <form action="/rides/<%= @ride.id %>/edit" method="get">
     <input type="submit" value="Edit Ride">
 </form>
+<%end%>
 
-<form action="/rides %>/edit" method="get">
-    <input type="submit" value="All Rides">
-</form>
-
-
+<% if current_user.id == @ride.user_id%>
 <form action="/rides/<%= @ride.id %>/destroy" method="POST">
 <input type="hidden" value="delete" name="_method">
-    <input type="submit" value="Delete Ride">
+<input type="submit" value="Delete Ride">
 </form>
+<%end%>

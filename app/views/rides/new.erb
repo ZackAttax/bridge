@@ -3,7 +3,7 @@
         <label>Name</label>
           <input type="text" name="ride[name]"> <br/>
         <label>Drop ride?</label>
-        <input type="text" name="drop"><br/>
+        <input type="text" name="ride[drop]"><br/>
          <label>Pace</label>
           <input type="text" name="ride[pace]"> <br/>
            <label>Start Time</label>
@@ -14,7 +14,7 @@
           <input type="number" name="ride[distance]"> <br/>
            <label>Description</label>
           <textarea name="ride[description]"> </textarea><br/>
-           <label>Surface/label>
+           <label>Surface</label>
           <input type="text" name="ride[surface]"> <br/>
           <input type="hidden" value="<%#{@user.id}%>"name="ride[user_id]"> <br/>
          <input type="submit" value="Create Ride">

@@ -13,15 +13,14 @@ class SessionsController < ApplicationController
             session["user_id"] = user.id
             redirect "/rides"
         else
-            "Error #{user.errors.full_messages.join(", ")}"
+            "Error"
             sleep(5)
             redirect "/sessions/new"
         end
     end
 
-    delete '/logout' do 
-        redirect_if_logged_in
+    delete '/logout' do
         session.clear
-        redirect "/login"
+        redirect "/sessions/new"
     end
 end

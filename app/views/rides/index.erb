@@ -1,6 +1,10 @@
-<a href="rides/new">Create New Ride</a>
-<% if current_user.rides != []%>%
-<a href="rides/user">My Rides</a>
+<form method="gets" action="/rides/new">
+    <input type="submit" value="Create New Ride">
+    </form>
+<% if current_user.rides != []%>
+<form method="gets" action="/rides/user">
+    <input type="submit" value="My Rides">
+    </form>
 <%end%>
 <ul>
 <% @rides.each do |r| %>

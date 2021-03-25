@@ -42,7 +42,7 @@ class RidesController < ApplicationController
 
     get '/rides/:id' do
         current_ride
-        erb :'rides/show'
+        erb :'rides/show_ride'
     end
 
     get '/rides/:id/edit' do

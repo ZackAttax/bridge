@@ -2,7 +2,7 @@ class CreateRide < ActiveRecord::Migration[5.2]
   def change
     create_table :rides do |t|
     t.string :name
-    t.boolean :drop
+    t.string :drop
     t.string :pace
     t.datetime :start_time
     t.string :location

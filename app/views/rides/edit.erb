@@ -1,9 +1,10 @@
 <h1>New Ride</h1>
-    <form method="PATCH" action="/rides/:id">
+    <form method="POST" action="/rides/<%=@ride.id%>">
+    <input type="hidden" value="patch" name="_method">
         <label>Name</label>
           <input type="text" name="ride[name]" value="<%= @ride.name %>"> <br/>
         <label>Drop ride?</label>
-        <input type="text" name="drop" value="<%= @ride.name %>"><br/>
+        <input type="boolean" name="drop" value="<%= @ride.drop %>"><br/>
          <label>Pace</label>
           <input type="text" name="ride[pace]" value="<%= @ride.pace %>"> <br/>
            <label>Start Time</label>
@@ -13,7 +14,7 @@
            <label>Distance</label>
           <input type="number" name="ride[distance]" value="<%= @ride.distance %>"> <br/>
            <label>Description</label>
-          <textarea name="ride[description]"><%= @ride.description %>"</textarea> <br/>
+          <textarea rows = "5" name="ride[description]"> <%= @ride.description %> </textarea> <br/>
            <label>Surface</label>
           <input type="text" name="ride[surface]" value="<%= @ride.surface %>"> <br/>
          

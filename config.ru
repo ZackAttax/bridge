@@ -10,3 +10,4 @@ use RidesController
 use UsersController
 use SessionsController
 run ApplicationController
+

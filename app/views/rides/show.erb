@@ -1,0 +1,22 @@
+<%=@ride.name %>
+<li><%=@ride.pace %></li>
+<li><%=@ride.drop %></li>
+<li><%=@ride.start_time %></li>
+<li><%=@ride.location %></li>
+<li><%=@ride.distance %></li>
+<li><%=@ride.surface %></li>
+<li><%=@ride.description %></li>
+
+<form action="/rides/<%= @ride.id %>/edit" method="get">
+    <input type="submit" value="Edit Ride">
+</form>
+
+<form action="/rides %>/edit" method="get">
+    <input type="submit" value="All Rides">
+</form>
+
+
+<form action="/rides/<%= @ride.id %>/destroy" method="POST">
+<input type="hidden" value="delete" name="_method">
+    <input type="submit" value="Delete Ride">
+</form>

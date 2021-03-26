@@ -1,13 +1,14 @@
 class RidesController < ApplicationController
 
     get '/rides' do
-       
+       @title = "All Rides"
         redirect_if_not_logged_in
         @rides = Ride.all
         erb :'rides/index'
     end
 
     get '/rides/user' do
+        @title = "My Rides"
         redirect_if_not_logged_in
         @rides = current_user.rides
         if @rides != []
@@ -35,7 +36,6 @@ class RidesController < ApplicationController
         redirect "/rides/#{ride.id}"
 
         else
-            binding.pry
             session["errors"] = ride.errors.full_messages.join(", ")
             redirect "/rides/new"
         end
@@ -59,9 +59,10 @@ class RidesController < ApplicationController
 
         current_ride
         if @ride.update(params[:ride])
+            error_message.clear
             redirect "/rides/#{@ride.id}"
         else
-            "Error #{@ride.full_messages.join(", ")}"
+            session["errors"] = ride.errors.full_messages.join(", ")
             #redirect "/rides/edit/#{ride.id}"
         end
     end

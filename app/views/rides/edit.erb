@@ -1,4 +1,6 @@
 <h1>Edit Ride</h1>
+<h3><%=error_message%></h3>
+
     <form method="POST" action="/rides/<%=@ride.id%>">
     <input type="hidden" value="patch" name="_method">
         <label>Name</label>

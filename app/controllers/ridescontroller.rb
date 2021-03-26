@@ -31,11 +31,12 @@ class RidesController < ApplicationController
         ride = current_user.rides.build(params["ride"])
         
         if ride.save
+            error_message.clear
         redirect "/rides/#{ride.id}"
 
         else
-            "Error #{ride.errors.full_messages.join(", ")}"
-            sleep(5)
+            binding.pry
+            session["errors"] = ride.errors.full_messages.join(", ")
             redirect "/rides/new"
         end
     end

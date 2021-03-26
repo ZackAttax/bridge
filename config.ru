@@ -6,6 +6,7 @@ require './config/environment'
 
 use Rack::MethodOverride
 
+
 use RidesController
 use UsersController
 use SessionsController

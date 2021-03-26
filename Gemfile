@@ -12,4 +12,5 @@ gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem "dotenv", "~> 2.7"
+gem 'bootstrap'
 

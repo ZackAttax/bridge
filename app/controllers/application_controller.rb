@@ -38,6 +38,10 @@ class ApplicationController < Sinatra::Base
       redirect "/rides" if logged_in?
     end
 
+    def error_message
+      session["errors"]
+    end
+
   end
 
 end

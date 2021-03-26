@@ -1,11 +1,5 @@
-<form method="gets" action="/rides/new">
-    <input type="submit" value="Create New Ride">
-    </form>
-<% if current_user.rides != []%>
-<form method="gets" action="/rides/user">
-    <input type="submit" value="My Rides">
-    </form>
-<%end%>
+<h1>Rides</h1>
+
 <ul>
 <% @rides.each do |r| %>
 <li><a href="/rides/<%= r.id %>"><%= r.name %></a></li>

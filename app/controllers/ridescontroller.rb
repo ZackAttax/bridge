@@ -32,7 +32,7 @@ class RidesController < ApplicationController
         ride = current_user.rides.build(params["ride"])
         
         if ride.save
-            error_message.clear
+            error_message = ""
         redirect "/rides/#{ride.id}"
 
         else

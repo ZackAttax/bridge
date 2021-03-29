@@ -22,3 +22,9 @@
           <input type="hidden" value="<%#{@user.id}%>"name="ride[user_id]"> <br/>
          <input type="submit" value="Create Ride">
     </form>
+<% if current_user.id%>
+<form action="/logout" method="POST">
+<input type="hidden" value="delete" name="_method">
+<input type="submit" value="Logout">
+</form>
+<%end%>

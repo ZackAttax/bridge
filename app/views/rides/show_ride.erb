@@ -20,3 +20,10 @@
 <input type="submit" value="Delete Ride">
 </form>
 <%end%>
+
+<% if current_user.id%>
+<form action="/logout" method="POST">
+<input type="hidden" value="delete" name="_method">
+<input type="submit" value="Logout">
+</form>
+<%end%>

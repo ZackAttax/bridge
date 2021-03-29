@@ -22,3 +22,9 @@
          
          <input type="submit" value="Update Ride">
     </form>
+<% if current_user.id%>
+<form action="/logout" method="POST">
+<input type="hidden" value="delete" name="_method">
+<input type="submit" value="Logout">
+</form>
+<%end%>
